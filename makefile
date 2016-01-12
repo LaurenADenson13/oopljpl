@@ -29,6 +29,9 @@ pull:
     --include "Operators.py"                \
     --include "Variables.py"                \
     --include "Iteration.py"                \
+    --include "Yield.py"                    \
+    --include "Lambda.py"                   \
+    --include "Comprehensions.py"           \
     --exclude "*"                           \
     ../../../examples/python/ examples/
 	@rsync -r -t -u -v --delete             \
@@ -39,6 +42,8 @@ pull:
     --include "Factorial.py"                \
     --include "FactorialT.py"               \
     --include "ReduceT.py"                  \
+    --include "MapT.py"                     \
+    --include "RMSET.py"                    \
     --exclude "*"                           \
     ../../../exercises/python/ exercises/
 
