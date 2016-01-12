@@ -43,6 +43,7 @@ pull:
     --include "FactorialT.py"               \
     --include "Reduce.py"                   \
     --include "ReduceT.py"                  \
+    --include "Reduce2T.py"                 \
     --include "MapT.py"                     \
     --include "RMSET.py"                    \
     --exclude "*"                           \

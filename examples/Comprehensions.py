@@ -97,6 +97,7 @@ for v in x :
 assert x == [2, 3, 4]
 assert y == [4, 5]
 assert z == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
+assert z == [  6,   7,   7,   8,   8,   9]
 
 x = [2, 3, 4]
 y = [4, 5]
@@ -104,6 +105,7 @@ z = [v + w for v in x for w in y]
 assert x == [2, 3, 4]
 assert y == [4, 5]
 assert z == [2+4, 2+5, 3+4, 3+5, 4+4, 4+5]
+assert z == [  6,   7,   7,   8,   8,   9]
 
 x = [2, 3, 4]
 y = [4, 5]
@@ -127,32 +129,35 @@ assert y == {10, 15, 20}
 
 x = {2 : "abc", 3 : "def", 4 : "ghi"}
 y = {}
-for k, v in x.items() :
-    y[k] = v + "xyz"
+for k in x :
+    y[k + 1] = x[k] + "xyz"
 assert x == {2 : "abc",    3 : "def",    4 : "ghi"}
-assert y == {2 : "abcxyz", 3 : "defxyz", 4 : "ghixyz"}
+assert y == {3 : "abcxyz", 4 : "defxyz", 5 : "ghixyz"}
 
 x = {2 : "abc", 3 : "def", 4 : "ghi"}
-y = {k : v + "xyz" for k, v in x.items()}              # dict comprehension
+y = {k + 1: x[k] + "xyz" for k in x}                   # dict comprehension
 assert type(y) is dict
 assert not hasattr(y, "__next__")
 assert     hasattr(y, "__iter__")
 assert x == {2 : "abc",    3 : "def",    4 : "ghi"}
-assert y == {2 : "abcxyz", 3 : "defxyz", 4 : "ghixyz"}
+assert y == {3 : "abcxyz", 4 : "defxyz", 5 : "ghixyz"}
 
 a = [2, 3, 4]
 r = reversed(a)
+assert str(type(r)) == "<class 'list_reverseiterator'>"
 assert list(r) == [4, 3, 2]
 assert list(r) == []
 
 a = ["abc", "def", "ghi"]
 e = enumerate(a)
+assert str(type(e)) == "<class 'enumerate'>"
 assert list(e) == [(0, "abc"), (1, "def"), (2, "ghi")]
 assert list(e) == []
 
 a = [2, 3, 4]
 b = [5, 6, 7]
 z = zip(a, b)
+assert str(type(z)) == "<class 'zip'>"
 assert list(z) == [(2, 5), (3, 6), (4, 7)]
 assert list(z) == []
 
