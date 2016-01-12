@@ -44,6 +44,7 @@ pull:
     --include "Reduce.py"                   \
     --include "ReduceT.py"                  \
     --include "Reduce2T.py"                 \
+    --include "Map.py"                      \
     --include "MapT.py"                     \
     --include "RMSET.py"                    \
     --exclude "*"                           \
