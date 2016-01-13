@@ -30,6 +30,7 @@ class MyUnitTests (TestCase) :
             with self.subTest() :
                 x = f([2, 3, 4], [1, 2, 3])
                 self.assertEqual(list(x), [1, 1, 1])
+                self.assertEqual(list(x), [1, 1, 1])
 
 if __name__ == "__main__" :
     main()
