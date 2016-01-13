@@ -33,6 +33,9 @@ pull:
     --include "Lambda.py"                   \
     --include "Comprehensions.py"           \
     --include "Iterables.py"                \
+    --include "CommandLine.py"              \
+    --include "FileInputOutput.py"          \
+    --include "FormattedOutput.py"          \
     --exclude "*"                           \
     ../../../examples/python/ examples/
 	@rsync -r -t -u -v --delete             \
@@ -44,12 +47,13 @@ pull:
     --include "FactorialT.py"               \
     --include "Reduce.py"                   \
     --include "ReduceT.py"                  \
-    --include "Reduce2T.py"                 \
     --include "Map.py"                      \
     --include "MapT.py"                     \
     --include "RMSET.py"                    \
     --include "SubtractT.py"                \
     --include "StDevT.py"                   \
+    --include "RangeIteratorT.py"           \
+    --include "RangeT.py"                   \
     --exclude "*"                           \
     ../../../exercises/python/ exercises/
 
