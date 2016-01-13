@@ -55,6 +55,7 @@ pull:
     --include "SubtractT.py"                \
     --include "StDev.py"                    \
     --include "StDevT.py"                   \
+    --include "RangeIterator.py"            \
     --include "RangeIteratorT.py"           \
     --include "RangeT.py"                   \
     --exclude "*"                           \
