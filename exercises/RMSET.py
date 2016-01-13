@@ -52,7 +52,7 @@ class MyUnitTests (TestCase) :
             with self.subTest() :
                 print()
                 print(f.__name__)
-                t = timeit(f.__name__ + "(10000 * [1], 10000 * [5]) == 4", "from __main__ import " + f.__name__, number = 100)
+                t = timeit(f.__name__ + "(10000 * [1], 10000 * [5])", "from __main__ import " + f.__name__, number = 100)
                 print("{:.2f} milliseconds".format(t * 1000))
 
 if __name__ == "__main__" :
