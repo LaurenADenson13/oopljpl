@@ -28,6 +28,13 @@ class MyUnitTests (TestCase) :
     def test_1 (self) :
         for f in self.a :
             with self.subTest() :
+                x = f([2, 3, 4], [2, 3, 4])
+                self.assertEqual(list(x), [0, 0, 0])
+                self.assertEqual(list(x), [0, 0, 0])
+
+    def test_2 (self) :
+        for f in self.a :
+            with self.subTest() :
                 x = f([2, 3, 4], [1, 2, 3])
                 self.assertEqual(list(x), [1, 1, 1])
                 self.assertEqual(list(x), [1, 1, 1])
