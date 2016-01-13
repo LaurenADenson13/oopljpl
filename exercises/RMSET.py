@@ -11,9 +11,10 @@ from RMSE import            \
     rmse_range_for,         \
     rmse_zip_for,           \
     rmse_zip_reduce,        \
-    rmse_map_sum,           \
+    rmse_zip_map_sum,       \
     rmse_zip_list_sum,      \
     rmse_zip_generator_sum, \
+    rmse_map_sum,           \
     rmse_numpy
 
 class MyUnitTests (TestCase) :
@@ -22,9 +23,10 @@ class MyUnitTests (TestCase) :
             rmse_range_for,
             rmse_zip_for,
             rmse_zip_reduce,
-            rmse_map_sum,
+            rmse_zip_map_sum,
             rmse_zip_list_sum,
             rmse_zip_generator_sum,
+            rmse_map_sum,
             rmse_numpy]
 
     def test_0 (self) :

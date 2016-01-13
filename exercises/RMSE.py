@@ -32,8 +32,9 @@ def rmse_zip_reduce (a, p) :
     v = reduce(lambda u, w : u + (w[0] - w[1]) ** 2, z, 0)
     return sqrt(v / len(a))
 
-def rmse_map_sum (a, p) :
-    v = sum(map(lambda x, y : (x - y) ** 2, a, p))
+def rmse_zip_map_sum (a, p) :
+    z = zip(a, p)
+    v = sum(map(lambda u : (u[0] - u[1]) ** 2, z))
     return sqrt(v / len(a))
 
 def rmse_zip_list_sum (a, p) :
@@ -44,6 +45,10 @@ def rmse_zip_list_sum (a, p) :
 def rmse_zip_generator_sum (a, p) :
     z = zip(a, p)
     v = sum((x - y) ** 2 for x, y in z)
+    return sqrt(v / len(a))
+
+def rmse_map_sum (a, p) :
+    v = sum(map(lambda x, y : (x - y) ** 2, a, p))
     return sqrt(v / len(a))
 
 def rmse_numpy (a, p) :
