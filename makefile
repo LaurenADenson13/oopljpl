@@ -51,6 +51,7 @@ pull:
     --include "MapT.py"                     \
     --include "RMSE.py"                     \
     --include "RMSET.py"                    \
+    --include "Subtract.py"                 \
     --include "SubtractT.py"                \
     --include "StDevT.py"                   \
     --include "RangeIteratorT.py"           \
