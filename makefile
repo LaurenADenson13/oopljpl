@@ -53,6 +53,7 @@ pull:
     --include "RMSET.py"                    \
     --include "Subtract.py"                 \
     --include "SubtractT.py"                \
+    --include "StDev.py"                    \
     --include "StDevT.py"                   \
     --include "RangeIteratorT.py"           \
     --include "RangeT.py"                   \
