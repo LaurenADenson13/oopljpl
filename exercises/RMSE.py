@@ -29,7 +29,7 @@ def rmse_zip_for (a, p) :
 
 def rmse_zip_reduce (a, p) :
     z = zip(a, p)
-    v = reduce(lambda v, a : v + (a[0] - a[1]) ** 2, z, 0)
+    v = reduce(lambda u, w : u + (w[0] - w[1]) ** 2, z, 0)
     return sqrt(v / len(a))
 
 def rmse_map_sum (a, p) :
