@@ -49,6 +49,7 @@ pull:
     --include "ReduceT.py"                  \
     --include "Map.py"                      \
     --include "MapT.py"                     \
+    --include "RMSE.py"                     \
     --include "RMSET.py"                    \
     --include "SubtractT.py"                \
     --include "StDevT.py"                   \
