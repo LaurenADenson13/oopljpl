@@ -4,7 +4,7 @@
 # MapT.py
 # -------
 
-# https://docs.python.org/3.5/library/functions.html#map
+# https://docs.python.org/3/library/functions.html#map
 
 from timeit   import timeit
 from unittest import main, TestCase

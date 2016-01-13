@@ -166,7 +166,15 @@ s = sorted(a)
 assert a == [4, 2, 3]
 assert s == [2, 3, 4]
 
-assert     all([True,  2, 3.45, "abc", [2, 3, 4], (2, 3, 4), {2, 3, 4}, {2 : "abc", 3 : "def", 4 : "ghi"}])
-assert not any([False, 0, 0.0,  "",    [],        (),        set(),     dict()])
+class A :
+    pass
+
+assert all([A(), True,  2, 3.45, "abc", [2, 3, 4], (2, 3, 4), {2, 3, 4}, {2 : "abc", 3 : "def", 4 : "ghi"}])
+
+class B :
+    def __bool__ (self) :
+        return False
+
+assert not any([B(), False, 0, 0.0,  "", [], (), set(), {}])
 
 print("Done.")

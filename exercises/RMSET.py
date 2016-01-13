@@ -4,16 +4,10 @@
 # RMSET.py
 # --------
 
-# http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html
-# http://docs.scipy.org/doc/numpy/reference/generated/numpy.sqrt.html
-# http://docs.scipy.org/doc/numpy/reference/generated/numpy.square.html
-# http://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html
-
 from timeit   import timeit
 from unittest import main, TestCase
 
 from RMSE import            \
-    rmse_while,             \
     rmse_range_for,         \
     rmse_zip_for,           \
     rmse_zip_reduce,        \
@@ -25,7 +19,6 @@ from RMSE import            \
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
-            rmse_while,
             rmse_range_for,
             rmse_zip_for,
             rmse_zip_reduce,
@@ -68,9 +61,6 @@ if __name__ == "__main__" :
 """
 % RMSET
 ....
-rmse_while
-555.48 milliseconds
-
 rmse_range_for
 405.71 milliseconds
 

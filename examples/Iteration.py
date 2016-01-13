@@ -84,16 +84,19 @@ assert s == 9
 
 d = {2 : "abc", 3 : "def", 4 : "ghi"}
 k = d.keys()
+assert str(type(k)) == "<class 'dict_keys'>"
 assert set(k) == {2, 3, 4}
 assert set(k) == {2, 3, 4}
 
 d = {2 : "abc", 3 : "def", 4 : "ghi"}
 v = d.values()
+assert str(type(v)) == "<class 'dict_values'>"
 assert set(v) == {"abc", "def", "ghi"}
 assert set(v) == {"abc", "def", "ghi"}
 
 d = {2 : "abc", 3 : "def", 4 : "ghi"}
 kv = d.items()
+assert str(type(kv)) == "<class 'dict_items'>"
 assert set(kv) == {(2, "abc"), (3, "def"), (4, "ghi")}
 assert set(kv) == {(2, "abc"), (3, "def"), (4, "ghi")}
 
@@ -145,7 +148,6 @@ assert s == 45
 x = count(0)                         # 0, 1, 2, ...
 assert type(x) is count
 assert     hasattr(x, "__next__")
-assert     hasattr(x, "__iter__")
 assert not hasattr(x, "__getitem__")
 #assert x[0] == 0                    # TypeError: 'itertools.count' object is not indexable
 s = 0

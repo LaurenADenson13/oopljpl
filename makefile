@@ -32,6 +32,7 @@ pull:
     --include "Yield.py"                    \
     --include "Lambda.py"                   \
     --include "Comprehensions.py"           \
+    --include "Iterables.py"                \
     --exclude "*"                           \
     ../../../examples/python/ examples/
 	@rsync -r -t -u -v --delete             \
@@ -47,6 +48,8 @@ pull:
     --include "Map.py"                      \
     --include "MapT.py"                     \
     --include "RMSET.py"                    \
+    --include "SubtractT.py"                \
+    --include "StDevT.py"                   \
     --exclude "*"                           \
     ../../../exercises/python/ exercises/
 
