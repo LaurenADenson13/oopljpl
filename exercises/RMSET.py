@@ -54,7 +54,7 @@ class MyUnitTests (TestCase) :
             with self.subTest() :
                 self.assertEqual(f((2, 3, 4), (4, 3, 2)), 1.632993161855452)
 
-    def test_r (self) :
+    def test_4 (self) :
         for f in self.a :
             with self.subTest() :
                 print()
