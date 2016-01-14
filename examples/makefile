@@ -6,7 +6,14 @@ FILES :=              \
     Coverage3         \
     Exceptions        \
     Operators         \
-    Iteration
+    Iteration         \
+    Yield             \
+    Lambda            \
+    Comprehensions    \
+    Iterables         \
+    CommandLine       \
+    FileInputOutput   \
+    FormattedOutput
 
 %.pyx: %.py
 	./$<

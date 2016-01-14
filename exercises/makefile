@@ -1,5 +1,14 @@
 FILES :=           \
-    IsPrime1T
+    IsPrime1T      \
+    IsPrime2T      \
+    FactorialT     \
+    ReduceT        \
+    MapT           \
+    RMSET          \
+    SubtractT      \
+    StDevT         \
+    RangeIteratorT \
+    RangeT
 
 %.pyx: %.py
 	./$<
