@@ -12,7 +12,12 @@ FILES :=              \
     Comprehensions    \
     Iterables         \
     FileInputOutput   \
-    FormattedOutput
+    FormattedOutput   \
+    GlobalVariables   \
+    ClassVariables    \
+    InstanceVariables \
+    Closures          \
+    Methods
 
 %.pyx: %.py
 	./$<

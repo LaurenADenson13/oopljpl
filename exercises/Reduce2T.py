@@ -54,7 +54,7 @@ class MyUnitTests (TestCase) :
     def test_7 (self) :
         for f in self.a :
             with self.subTest() :
-                self.assertRaises(TypeError, f, sub, [], msg = "reduce() of empty sequence with no initial value")
+                self.assertRaises(TypeError, f, sub, [])
 
 if __name__ == "__main__" :
     main()

@@ -32,34 +32,41 @@ class MyUnitTests (TestCase) :
 
     def test_1 (self) :
         for f in self.a :
-            self.assertEqual(f([2, 2]), 0)
+            with self.subTest() :
+                self.assertEqual(f([2, 2]), 0)
 
     def test_2 (self) :
         for f in self.a :
-            self.assertEqual(f([2, 3]), 0.7071067811865476)
+            with self.subTest() :
+                self.assertEqual(f([2, 3]), 0.7071067811865476)
 
     def test_3 (self) :
         for f in self.a :
-            self.assertEqual(f([2, 2, 2]), 0)
+            with self.subTest() :
+                self.assertEqual(f([2, 2, 2]), 0)
 
     def test_4 (self) :
         for f in self.a :
-            self.assertEqual(f([2, 3, 4]), 1)
+            with self.subTest() :
+                self.assertEqual(f([2, 3, 4]), 1)
 
     def test_5 (self) :
         for f in self.a :
-            self.assertRaises(StatisticsError, f, [])
+            with self.subTest() :
+                self.assertRaises(StatisticsError, f, [])
 
     def test_6 (self) :
         for f in self.a :
-            self.assertRaises(StatisticsError, f, [2])
+            with self.subTest() :
+                self.assertRaises(StatisticsError, f, [2])
 
     def test_7 (self) :
         for f in self.a :
-            print()
-            print(f.__name__)
-            t = timeit(f.__name__ + "(10000 * [2]) == 0", "from __main__ import " + f.__name__, number = 100)
-            print("{:.2f} milliseconds".format(t * 1000))
+            with self.subTest() :
+                print()
+                print(f.__name__)
+                t = timeit(f.__name__ + "(10000 * [2]) == 0", "from __main__ import " + f.__name__, number = 100)
+                print("{:.2f} milliseconds".format(t * 1000))
 
 if __name__ == "__main__" :
     main()
