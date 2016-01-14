@@ -22,6 +22,9 @@ FILES :=              \
 	coverage run --branch ./$<
 	coverage report -m
 
+CommandLine.pyx: CommandLine.py
+	CommandLine.py Nothing to be done.
+
 clean:
 	rm -f  .coverage
 	rm -f  *.pyc
