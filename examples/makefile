@@ -11,7 +11,6 @@ FILES :=              \
     Lambda            \
     Comprehensions    \
     Iterables         \
-    CommandLine       \
     FileInputOutput   \
     FormattedOutput
 
@@ -20,13 +19,6 @@ FILES :=              \
 
 %.pyy: %.py
 	coverage run --branch ./$<
-	coverage report -m
-
-CommandLine.pyx: CommandLine.py
-	CommandLine.py Nothing to be done.
-
-CommandLine.pyy: CommandLine.py
-	coverage run --branch CommandLine.py Nothing to be done.
 	coverage report -m
 
 clean:
