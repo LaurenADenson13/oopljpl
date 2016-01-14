@@ -4,7 +4,7 @@
 # ReduceT.py
 # ----------
 
-# https://docs.python.org/3.4/library/functools.html
+# https://docs.python.org/3/library/functools.html
 
 from functools import reduce
 from operator  import add, sub

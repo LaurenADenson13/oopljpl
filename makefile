@@ -36,6 +36,16 @@ pull:
     --include "CommandLine.py"              \
     --include "FileInputOutput.py"          \
     --include "FormattedOutput.py"          \
+    --include "GlobalVariables.py"          \
+    --include "ClassVariables.py"           \
+    --include "InstanceVariables.py"        \
+    --include "Closures.py"                 \
+    --include "Methods.py"                  \
+    --include "FunctionKeywords.py"         \
+    --include "FunctionDefaults.py"         \
+    --include "FunctionUnpacking.py"        \
+    --include "FunctionTuple.py"            \
+    --include "FunctionDict.py"             \
     --exclude "*"                           \
     ../../../examples/python/ examples/
 	@rsync -r -t -u -v --delete             \
@@ -53,9 +63,15 @@ pull:
     --include "RMSET.py"                    \
     --include "Subtract.py"                 \
     --include "SubtractT.py"                \
+    --include "StDev.py"                    \
     --include "StDevT.py"                   \
+    --include "RangeIterator.py"            \
     --include "RangeIteratorT.py"           \
+    --include "Range.py"                    \
     --include "RangeT.py"                   \
+    --include "ComplexT.py"                 \
+    --include "Reduce2T.py"                 \
+    --include "Map2T.py"                    \
     --exclude "*"                           \
     ../../../exercises/python/ exercises/
 

@@ -1,10 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # --------
 # Yield.py
 # --------
 
-print "Yield.py"
+print("Yield.py")
 
 def f () :
     yield 2
@@ -39,4 +39,4 @@ try :
 except StopIteration :
     pass
 
-print "Done."
+print("Done.")

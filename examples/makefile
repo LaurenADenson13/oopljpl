@@ -6,7 +6,18 @@ FILES :=              \
     Coverage3         \
     Exceptions        \
     Operators         \
-    Iteration
+    Iteration         \
+    Yield             \
+    Lambda            \
+    Comprehensions    \
+    Iterables         \
+    FileInputOutput   \
+    FormattedOutput   \
+    GlobalVariables   \
+    ClassVariables    \
+    InstanceVariables \
+    Closures          \
+    Methods
 
 %.pyx: %.py
 	./$<
